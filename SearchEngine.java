@@ -3,9 +3,11 @@ import java.net.URI;
 
 class Handler implements URLHandler{
     public String handleRequest(URI url) {
+        String display = "";
         if (url.getPath().contains("/add")){
             String[] splits = url.getQuery().split("=");
-            return String.format("result: " + splits[1]);
+            display += String.format("result: " + splits[1]);
+            return display;
         }
         else {return "error";}
     }
