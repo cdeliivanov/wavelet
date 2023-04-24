@@ -7,7 +7,7 @@ class Handler implements URLHandler{
             String[] splits = url.getPath().split("=");
             return String.format("result: " + splits[1]);
         }
-        else {return " ";}
+        else {return "error";}
     }
 }
 
