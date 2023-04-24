@@ -2,11 +2,11 @@ import java.io.IOException;
 import java.net.URI;
 
 class Handler implements URLHandler{
+    String display = "";
     public String handleRequest(URI url) {
-        String display = "";
         if (url.getPath().contains("/add")){
             String[] splits = url.getQuery().split("=");
-            display += String.format("result: " + splits[1]);
+            display += String.format(splits[1]);
             return display;
         }
         else {return "error";}
