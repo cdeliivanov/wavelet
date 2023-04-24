@@ -4,7 +4,7 @@ import java.net.URI;
 class Handler implements URLHandler{
     public String handleRequest(URI url) {
         if (url.getPath().contains("/add")){
-            String[] splits = url.getPath().split("=");
+            String[] splits = url.getQuery().split("=");
             return String.format("result: " + splits[1]);
         }
         else {return "error";}
