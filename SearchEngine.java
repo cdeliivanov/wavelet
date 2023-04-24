@@ -6,7 +6,7 @@ class Handler implements URLHandler{
     public String handleRequest(URI url) {
         if (url.getPath().contains("/add")){
             String[] splits = url.getQuery().split("=");
-            display += String.format(splits[1]);
+            display += String.format(splits[1] + "\n");
             return display;
         }
         else {return "error";}
