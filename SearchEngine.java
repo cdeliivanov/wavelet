@@ -4,12 +4,12 @@ import java.net.URI;
 class Handler implements URLHandler{
     String display = "";
     public String handleRequest(URI url) {
-        if (url.getPath().contains("/add-message?s")){
+        if (url.getPath().contains("/add-message")){
             String[] splits = url.getQuery().split("=");
             display += String.format(splits[1] + "\n");
             return display;
         }
-        else {return "error";}
+        else {return "Error: String not Found";}
     }
 }
 
