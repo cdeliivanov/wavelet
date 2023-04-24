@@ -4,7 +4,7 @@ import java.net.URI;
 class Handler implements URLHandler{
     String display = "";
     public String handleRequest(URI url) {
-        if (url.getPath().contains("/add")){
+        if (url.getPath().contains("/add-message?s")){
             String[] splits = url.getQuery().split("=");
             display += String.format(splits[1] + "\n");
             return display;
